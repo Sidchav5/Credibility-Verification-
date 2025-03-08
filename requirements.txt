@@ -1,0 +1,8 @@
+Flask
+newspaper3k
+nltk
+numpy
+matplotlib
+transformers
+google-api-python-client
+scikit-learn

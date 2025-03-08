@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Credibility Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>News Credibility Verification</h1>
+        
+        <label for="inputType">Select Input Type:</label>
+        <select id="inputType">
+            <option value="url">URL</option>
+            <option value="summary">Summary</option>
+        </select>
+
+        <textarea id="content" placeholder="Enter news URL or summary"></textarea>
+        <button id="P" onclick="processInput()">Proceed</button>
+
+        <div id="summarySection" style="display:none;">
+            <h3>Generated Summary:</h3>
+            <p id="summaryText"></p>
+             
+            <input type="text" id="keywords" placeholder="Enter keywords (comma-separated)">
+            <button onclick="searchArticles()">Submit</button>
+        </div>
+
+        <div id="results" style="display:none;">
+            <h3>Results</h3>
+            <p><strong>Classification:</strong> <span id="classification"></span></p>
+            <p><strong>Average Score:</strong> <span id="avgScore"></span></p>
+
+            <h4>Related Articles:</h4>
+            <ul id="articleList"></ul>
+
+            <h4>Fact Check Results:</h4>
+            <ul id="factCheckList"></ul>
+
+            <!-- Graph Section -->
+            <h4>Similarity Graph:</h4>
+            <img id="similarityGraph" src="" alt="Similarity Graph" style="display:none;">
+
+            <!-- Suspicious News Note -->
+            <div id="suspiciousNote" style="display:none; margin-top: 20px; padding: 15px; background: #ffeeba; border-left: 5px solid #ffc107; border-radius: 5px;">
+                <p><strong>Note:</strong> If no related articles are found, the news article can be considered <strong>Suspicious</strong>. Please refer to valid sources such as trusted news agencies before believing or sharing.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
