@@ -23,3 +23,7 @@ An AI-powered system that verifies news credibility by analyzing content, cross-
 4️⃣ Displays Fake, Suspicious, or Correct results with graphs
 
 🔗 Explore & Contribute! 🚀
+
+https://github.com/user-attachments/assets/5aa934eb-c1d3-4f2c-b0d4-50fcf4baa608
+
+
